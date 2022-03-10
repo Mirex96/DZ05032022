@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:hint="Name:"
+        android:inputType="text"
+        android:maxLength="10"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Last name:"
+        android:inputType="text"
+        android:maxLength="10"
+        android:textSize="11sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText1" />
+
+    <EditText
+        android:id="@+id/ediText3"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:hint="Number:"
+        android:inputType="number"
+        android:textSize="11sp"
+        android:maxLength="10"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="editText1, editText2, ediText3" />
+
+    <Space
+        android:id="@+id/spacer"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/barrier" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="button1"
+        android:textAllCaps="false"
+        android:textSize="11sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/editText1"
+        app:layout_constraintLeft_toRightOf="@+id/spacer" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="button2"
+        android:textAllCaps="false"
+        android:textSize="11sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/editText2"
+        app:layout_constraintLeft_toRightOf="@id/spacer" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="button3"
+        android:textAllCaps="false"
+        android:textSize="11sp"
+
+        app:layout_constraintBaseline_toBaselineOf="@+id/ediText3"
+        app:layout_constraintLeft_toRightOf="@id/spacer" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
